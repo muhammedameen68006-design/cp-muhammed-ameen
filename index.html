@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammed Ameen CP | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+        
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; background-color: #0a0a0a; color: #ffffff; overflow-x: hidden; }
+        
+        .gradient-text { 
+            background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+        }
+
+        /* Subtle floating animation for the Hero Title */
+        .float-anim {
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* Glassmorphism effect for cards */
+        .service-card {
+            transition: all 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 10px 30px -10px rgba(79, 172, 254, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <section class="h-screen flex flex-col justify-center items-center text-center px-4">
+        <div data-aos="zoom-out" data-aos-duration="1500">
+            <h1 class="text-5xl md:text-7xl font-bold mb-4 float-anim">
+                Muhammed <span class="gradient-text">Ameen CP</span>
+            </h1>
+        </div>
+        <p data-aos="fade-up" data-aos-delay="400" class="text-gray-400 text-lg md:text-xl max-w-2xl">
+            Videographer, Video Editor, AI Web Designer
+        </p>
+        <div data-aos="fade-up" data-aos-delay="600" class="mt-8 space-x-4">
+            <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-medium transition inline-block">Hire Me</a>
+            <a href="#services" class="border border-gray-600 hover:border-white px-8 py-3 rounded-full font-medium transition inline-block">My Services</a>
+        </div>
+    </section>
+
+    <section id="services" class="py-20 bg-[#111]">
+        <div class="container mx-auto px-6">
+            <h2 data-aos="fade-down" class="text-3xl font-bold mb-12 text-center">What I Do</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div data-aos="fade-right" data-aos-delay="200" class="service-card p-8 rounded-2xl bg-[#1a1a1a] border border-gray-800 hover:border-blue-500">
+                    <div class="text-4xl mb-4">🎬</div>
+                    <h3 class="text-xl font-bold mb-2">Video Editing</h3>
+                    <p class="text-gray-400">Professional post-production, color grading, and motion graphics to tell compelling stories.</p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="400" class="service-card p-8 rounded-2xl bg-[#1a1a1a] border border-gray-800 hover:border-blue-500">
+                    <div class="text-4xl mb-4">🎥</div>
+                    <h3 class="text-xl font-bold mb-2">Videography</h3>
+                    <p class="text-gray-400">High-quality visual capture for brands, events, and all other projects.</p>
+                </div>
+                <div data-aos="fade-left" data-aos-delay="600" class="service-card p-8 rounded-2xl bg-[#1a1a1a] border border-gray-800 hover:border-blue-500">
+                    <div class="text-4xl mb-4">💻</div>
+                    <h3 class="text-xl font-bold mb-2">Web Designing</h3>
+                    <p class="text-gray-400">Building fast, responsive, and modern websites using the latest AI technologies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 container mx-auto px-6">
+        <div data-aos="flip-up" class="max-w-4xl mx-auto bg-[#1a1a1a] p-10 rounded-3xl border border-gray-800">
+            <h2 class="text-3xl font-bold mb-6">Let's Work Together</h2>
+            
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {alert('Sent Successfully!'); window.location.reload();}"></iframe>
+
+            <form 
+                action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdg3cgNRqzs64QhTE3tT2vSUcXGCNcvCgItIAqe08VM3psTEg/formResponse" 
+                method="POST" 
+                target="hidden_iframe" 
+                onsubmit="submitted=true;"
+                class="grid grid-cols-1 md:grid-cols-2 gap-6"
+            >
+                <input type="text" name="entry.958563401" placeholder="Your Name" required
+                    class="bg-[#0a0a0a] border border-gray-700 p-4 rounded-lg focus:outline-none focus:border-blue-500 text-white transition-all">
+                
+                <input type="email" name="entry.1278597952" placeholder="Your Email" required
+                    class="bg-[#0a0a0a] border border-gray-700 p-4 rounded-lg focus:outline-none focus:border-blue-500 text-white transition-all">
+                
+                <textarea name="entry.1142034016" placeholder="Your Message" required
+                    class="md:col-span-2 bg-[#0a0a0a] border border-gray-700 p-4 rounded-lg h-32 focus:outline-none focus:border-blue-500 text-white transition-all"></textarea>
+                
+                <button type="submit" class="md:col-span-2 bg-white text-black font-bold py-4 rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-500 transform hover:-translate-y-1">
+                    Send Message
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="py-10 text-center text-gray-500 text-sm">
+        &copy; Designed by Cp Ameen
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: false
+        });
+        var submitted = false;
+    </script>
+</body>
+</html>
